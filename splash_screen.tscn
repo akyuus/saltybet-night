@@ -1,0 +1,71 @@
+[gd_scene load_steps=4 format=3 uid="uid://sdqlklygn3jn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c8184"]
+bg_color = Color(0.04303915, 0.043039158, 0.043039113, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Theme" id="Theme_ty3ja"]
+Panel/styles/panel = SubResource("StyleBoxFlat_c8184")
+
+[sub_resource type="Theme" id="Theme_el3v4"]
+
+[node name="SplashScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_ty3ja")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/normal_font_size = 60
+text = "SALTYBET NIGHT"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="Join" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_el3v4")
+theme_override_font_sizes/font_size = 40
+text = "Join Server"
+
+[node name="Create" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_el3v4")
+theme_override_font_sizes/font_size = 40
+text = "Create Server
+"
